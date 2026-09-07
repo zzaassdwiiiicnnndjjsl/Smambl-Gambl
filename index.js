@@ -53,7 +53,7 @@ app.get("/api/maintenance", (req, res) => {
 
     const message =
         process.env.MAINTENANCE_MESSAGE ||
-        "StumbleDark is currently under maintenance. Please try again later.";
+        "StumbleBurger is currently under maintenance. Please try again later.";
 
     return res.status(200).json({
         maintenance,
@@ -114,7 +114,7 @@ app.get("/api/update-required", (req, res) => {
 
     const message =
         process.env.UPDATE_REQUIRED_MESSAGE ||
-        "A new version of StumbleDark is required. Please update your game.";
+        "A new version of StumbleBurger is required. Please update your game.";
 
     if (!clientVersion) {
         return res.status(400).json({
@@ -176,7 +176,7 @@ app.use((req, res, next) => {
         error: "MAINTENANCE",
         message:
             process.env.MAINTENANCE_MESSAGE ||
-            "StumbleDark is currently under maintenance. Please try again later."
+            "StumbleBurger is currently under maintenance. Please try again later."
     });
 });
 
